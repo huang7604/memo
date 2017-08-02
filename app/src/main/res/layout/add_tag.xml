@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!--标题布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_tag_title"
+        android:layout_marginTop="5dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/button_back"
+            android:id="@+id/add_tag_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑标签"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/add_tag_back"
+            android:layout_alignBaseline="@id/add_tag_back" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#bebaba"
+            android:layout_below="@id/add_tag_back"
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+
+    <!--创建新标签-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_tag_create"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/add_tag_title">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_add_tag_delete"
+            android:id="@+id/add_tag_delete" />
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:paddingLeft="5dp"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:textSize="15sp"
+            android:id="@+id/add_tag_edit"
+            android:hint="创建新标签"
+            android:background="@null"
+            android:layout_alignBaseline="@id/add_tag_delete"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dip"
+            android:background="#bebaba"
+            android:layout_below="@id/add_tag_edit"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginRight="70dp"/>
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/add_tag_edit"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_tag_none"
+            android:id="@+id/add_tag_color_select" />
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@id/add_tag_color_select"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/button_save"
+            android:id="@+id/add_tag_save" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_tag_list_view"
+        android:layout_below="@id/add_tag_create"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+    <!--删除菜单按钮组，-->
+    <GridView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:id="@+id/add_tag_grid_view"
+        android:background="@drawable/grid_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true">
+    </GridView>
+
+</RelativeLayout>

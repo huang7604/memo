@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="15dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:id="@+id/list_view_sliding_image_tag"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingLeft="18dp"
+            android:layout_toRightOf="@id/list_view_sliding_image_tag"
+            android:layout_alignBaseline="@id/list_view_sliding_image_tag"
+            android:id="@+id/list_view_sliding_text_tag"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="("
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_toRightOf="@id/list_view_sliding_text_tag"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBaseline="@id/list_view_sliding_image_tag"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/list_view_sliding_number_tag"
+            android:layout_toRightOf="@id/list_view_sliding_text_tag"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_toRightOf="@id/list_view_sliding_text_tag"
+            android:layout_marginLeft="19dp"
+            android:layout_alignBaseline="@id/list_view_sliding_image_tag"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dip"
+            android:background="#bebaba"
+            android:layout_below="@id/list_view_sliding_text_tag"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="25dp"/>
+</RelativeLayout>

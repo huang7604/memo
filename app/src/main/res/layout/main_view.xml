@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!--标题布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_marginTop="30dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_menu_black_24dp"
+            android:id="@+id/show_slide_menu" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备忘录"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/show_slide_menu"
+            android:layout_alignBaseline="@id/show_slide_menu"
+            android:id="@+id/title_edit"/>
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_apps_black_24dp"
+            android:id="@+id/change_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#bebaba"
+            android:layout_below="@id/change_view"
+            android:layout_marginTop="10dp"
+            android:id="@+id/view" />
+    </RelativeLayout>
+
+    <!--搜素框-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:textSize="15sp"
+        android:id="@+id/search_edit_frame"
+        android:hint="搜索笔记"
+        android:layout_below="@id/title" />
+
+    <!--显示备忘录列表，默认可见-->
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_edit_frame"
+        android:layout_marginTop="10dp"
+        android:id="@+id/list_memo_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="20dp">
+    </ListView>
+
+    <!--显示备忘录方格，默认不可见-->
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_edit_frame"
+        android:layout_marginTop="10dp"
+        android:id="@+id/grid_memo_content"
+        android:numColumns="2"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:visibility="invisible">
+    </GridView>
+
+    <!--默认菜单按钮组-->
+    <GridView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:id="@+id/grid_memo_menu_one"
+        android:background="@drawable/grid_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible">
+    </GridView>
+
+
+
+</RelativeLayout>

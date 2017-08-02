@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.memo">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/memo"
+        android:label="我的备忘录"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.AddTagActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity android:name=".activity.DeleteTagActivity">
+        </activity>
+        <activity android:name=".activity.AddMemoActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".activity.DeleteMemoActivity">
+        </activity>
+        <activity android:name=".activity.DisplayMemoActivity">
+            <intent-filter>
+                <action android:name="com.memo.activity.DisplayMemoActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".broadcast.AlarmBroadcast">
+            <intent-filter>
+                <action android:name="com.memo.broadcast.AlarmBroadcast"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.AlarmService">
+
+        </service>
+    </application>
+
+</manifest>

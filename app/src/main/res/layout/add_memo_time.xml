@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="4dp">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_alarm_black_24dp"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:id="@+id/add_memo_alarm_time"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/color_image"/>
+    <Button
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/add_memo_alarm_delete"
+        android:background="@drawable/ic_add_tag_delete"
+        android:layout_marginRight="0dp"/>
+</LinearLayout>

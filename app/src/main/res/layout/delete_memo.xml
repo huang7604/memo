@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!--标题布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_memo_title"
+        android:layout_marginTop="5dp">
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_add_tag_delete"
+            android:id="@+id/delete_memo_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未选择"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/title_delete"
+            android:layout_alignBaseline="@id/delete_memo_back"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:background="@drawable/text_bg"
+            android:layout_toRightOf="@id/title_delete"
+            android:id="@+id/delete_memo_number"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#bebaba"
+            android:layout_below="@id/delete_memo_back"
+            android:layout_marginTop="8dp"
+           />
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_memo_listView"
+        android:layout_below="@+id/delete_memo_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp">
+    </ListView>
+
+    <GridView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/grid_bg"
+        android:id="@+id/delete_memo_grid_view"
+        android:numColumns="2">
+
+    </GridView>
+
+
+</RelativeLayout>
